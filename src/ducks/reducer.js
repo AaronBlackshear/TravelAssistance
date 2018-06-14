@@ -8,7 +8,6 @@ const TEST = "TEST";
 
 //ACTION CREATOR
 export function test() {
-  console.log(TEST);
   return {
     type: TEST
   };
@@ -16,9 +15,8 @@ export function test() {
 
 //REDUCER
 export default function reducer(state = initialState, action) {
-    console.log(action)
   switch (action.type) {
-    case `TEST`:
+    case "TEST":
       console.log(state.test);
       return state;
     default:

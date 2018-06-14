@@ -5,7 +5,7 @@ import { test } from "../ducks/reducer";
 
 class Home extends Component {
   render() {
-    test();
+    this.props.test();
     return (
       <div>
         <h1>Home</h1>
@@ -14,7 +14,9 @@ class Home extends Component {
   }
 }
 
-const mapStateToProps = state => state;
+const mapStateToProps = state => {
+  return { ...state };
+};
 
 export default connect(
   mapStateToProps,
