@@ -1,24 +1,13 @@
 //INITIAL STATE
-const initialState = {
-  test: "test"
-};
+const initialState = {};
 
-//ACTION TYPE
-const TEST = "TEST";
+//ACTION TYPES
 
-//ACTION CREATOR
-export function test() {
-  return {
-    type: TEST
-  };
-}
+//ACTION CREATORS
 
 //REDUCER
 export default function reducer(state = initialState, action) {
   switch (action.type) {
-    case "TEST":
-      console.log(state.test);
-      return state;
     default:
       return state;
   }
