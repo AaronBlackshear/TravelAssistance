@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
 import { connect } from "react-redux";
-import { test } from "../ducks/reducer";
 
 class Home extends Component {
   render() {
+    
     return (
       <div>
         <h1>Home</h1>
@@ -15,7 +15,4 @@ class Home extends Component {
 
 const mapStateToProps = state => state;
 
-export default connect(
-  mapStateToProps,
-  { test }
-)(Home);
+export default connect( mapStateToProps )(Home);
