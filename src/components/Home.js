@@ -15,10 +15,10 @@ class Home extends Component {
         return (
           <GoogleMap
             defaultZoom={8}
-            defaultCenter={{ lat: -34.397, lng: 150.644 }}
+            defaultCenter={{ lat: 32.7767, lng: -96.7970 }}
           >
             {props.isMarkerShown && (
-              <Marker position={{ lat: -34.397, lng: 150.644 }} />
+              <Marker position={{ lat: 32.7767, lng: -96.7970 }} />
             )}
           </GoogleMap>
         );
@@ -32,7 +32,7 @@ class Home extends Component {
           googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
           loadingElement={<div style={{ height: `100%` }} />}
           containerElement={<div style={{ height: `400px` }} />}
-          mapElement={<div style={{ height: `50vh`, width: `50vw` }} />}
+          mapElement={<div style={{ height: `50vh`, width: `80vw` }} />}
         />
       </div>
     );
