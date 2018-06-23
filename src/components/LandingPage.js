@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
 import { connect } from "react-redux";
-// import {
-//   withScriptjs,
-//   withGoogleMap,
-//   GoogleMap,
-//   Marker
-// } from "react-google-maps";
+import {
+  withScriptjs,
+  withGoogleMap,
+  GoogleMap,
+  Marker
+} from "react-google-maps";
 
 import { finishStepOne } from "../ducks/reducer";
 
@@ -20,20 +20,20 @@ class LandingPage extends Component {
   };
 
   render() {
-    // const MyMapComponent = withScriptjs(
-    //   withGoogleMap(props => {
-    //     return (
-    //       <GoogleMap
-    //         defaultZoom={8}
-    //         defaultCenter={{ lat: 32.7767, lng: -96.797 }}
-    //       >
-    //         {props.isMarkerShown && (
-    //           <Marker position={{ lat: 32.7767, lng: -96.797 }} />
-    //         )}
-    //       </GoogleMap>
-    //     );
-    //   })
-    // );
+    const MyMapComponent = withScriptjs(
+      withGoogleMap(props => {
+        return (
+          <GoogleMap
+            defaultZoom={8}
+            defaultCenter={{ lat: 32.7767, lng: -96.797 }}
+          >
+            {props.isMarkerShown && (
+              <Marker position={{ lat: 32.7767, lng: -96.797 }} />
+            )}
+          </GoogleMap>
+        );
+      })
+    );
 
     return (
       <div>
@@ -47,13 +47,13 @@ class LandingPage extends Component {
         <button onClick={() => finishStepOne(this.state.userInput)}>
           Next Step
         </button>
-        {/* <MyMapComponent
+        <MyMapComponent
           isMarkerShown
           googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
           loadingElement={<div style={{ height: `100%` }} />}
           containerElement={<div style={{ height: `400px` }} />}
           mapElement={<div style={{ height: `50vh`, width: `80vw` }} />}
-        /> */}
+        />
       </div>
     );
   }
